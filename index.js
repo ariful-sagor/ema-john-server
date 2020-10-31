@@ -30,6 +30,7 @@ client.connect(err => {
           res.send(result.insertedCount)
       })
   })
+  // adding search option
     app.get('/products', (req, res) => {
         const search= req.query.search;
         productsCollection.find({name: {$regex: search}})
